@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'KVHeroTransition_Example' do
+  pod 'KVHeroTransition', :path => '../'
+
+  target 'KVHeroTransition_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
