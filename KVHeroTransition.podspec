@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'KVHeroTransition'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'A lightweight and customizable zoom transition animation library for iOS.'
 
 # This description is used to generate tags and improve search results.

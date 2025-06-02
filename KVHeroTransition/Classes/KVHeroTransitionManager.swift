@@ -18,7 +18,7 @@ public final class KVHeroTransitionManager: NSObject {
 
     // MARK: Initialization
 
-    init(
+    public init(
         presentingViewController: KVTransitionAnimatable,
         presentedViewController: KVTransitionAnimatable
     ) {
