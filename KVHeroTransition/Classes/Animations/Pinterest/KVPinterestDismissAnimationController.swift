@@ -1,8 +1,8 @@
 //
-//  PinterestDismissAnimationController.swift
-//  UICollectionViewTransitions
+//  KVPinterestDismissAnimationController.swift
+//  KVHeroTransition
 //
-//  Created by Luis Fariña on 31/10/22.
+//  Created by Khanh Vu on 2/6/25.
 //
 
 import UIKit

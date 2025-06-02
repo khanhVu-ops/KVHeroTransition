@@ -1,13 +1,13 @@
 //
-//  TransitionManager.swift
-//  UICollectionViewTransitions
+//  KVPinterestTransitionManager.swift
+//  KVHeroTransition
 //
-//  Created by Luis Fariña on 30/10/22.
+//  Created by Khanh Vu on 2/6/25.
 //
 
 import UIKit
 
-public final class KVHeroTransitionManager: NSObject {
+public final class KVPinterestTransitionManager: NSObject {
 
     // MARK: Properties
 
@@ -33,7 +33,7 @@ public final class KVHeroTransitionManager: NSObject {
 
 // MARK: - UIViewControllerTransitioningDelegate
 
-extension KVHeroTransitionManager: UIViewControllerTransitioningDelegate {
+extension KVPinterestTransitionManager: UIViewControllerTransitioningDelegate {
 
     public func animationController(
         forPresented presented: UIViewController,
@@ -45,8 +45,8 @@ extension KVHeroTransitionManager: UIViewControllerTransitioningDelegate {
         else {
             return nil
         }
-
-        return KVHeroPresentAnimationController(
+        
+        return KVPinterestPresentAnimationController(
             presentingViewController: presentingViewController,
             presentedViewController: presentedViewController
         )
@@ -61,7 +61,7 @@ extension KVHeroTransitionManager: UIViewControllerTransitioningDelegate {
             return nil
         }
         
-        return KVHeroDismissAnimationController(
+        return KVPinterestDismissAnimationController(
             presentingViewController: presentingViewController,
             presentedViewController: presentedViewController
         )

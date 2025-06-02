@@ -1,13 +1,13 @@
 //
-//  PinterestTransitionManager.swift
-//  AdmicroHybridEvent
+//  KVHeroTransitionManager.swift
+//  KVHeroTransition
 //
 //  Created by Khanh Vu on 2/6/25.
 //
 
 import UIKit
 
-public final class KVPinterestTransitionManager: NSObject {
+public final class KVHeroTransitionManager: NSObject {
 
     // MARK: Properties
 
@@ -33,7 +33,7 @@ public final class KVPinterestTransitionManager: NSObject {
 
 // MARK: - UIViewControllerTransitioningDelegate
 
-extension KVPinterestTransitionManager: UIViewControllerTransitioningDelegate {
+extension KVHeroTransitionManager: UIViewControllerTransitioningDelegate {
 
     public func animationController(
         forPresented presented: UIViewController,
@@ -45,8 +45,8 @@ extension KVPinterestTransitionManager: UIViewControllerTransitioningDelegate {
         else {
             return nil
         }
-        
-        return KVPinterestPresentAnimationController(
+
+        return KVHeroPresentAnimationController(
             presentingViewController: presentingViewController,
             presentedViewController: presentedViewController
         )
@@ -61,7 +61,7 @@ extension KVPinterestTransitionManager: UIViewControllerTransitioningDelegate {
             return nil
         }
         
-        return KVPinterestDismissAnimationController(
+        return KVHeroDismissAnimationController(
             presentingViewController: presentingViewController,
             presentedViewController: presentedViewController
         )
