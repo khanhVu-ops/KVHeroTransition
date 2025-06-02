@@ -18,7 +18,7 @@ public final class KVPinterestTransitionManager: NSObject {
 
     // MARK: Initialization
 
-    init(
+    public init(
         presentingViewController: KVTransitionAnimatable,
         presentedViewController: KVTransitionAnimatable
     ) {

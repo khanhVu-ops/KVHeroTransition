@@ -58,7 +58,7 @@ public protocol KVTransitionAnimatable where Self: UIViewController {
     func heroImage() -> UIImage?
 }
 
-extension KVTransitionAnimatable {
+public extension KVTransitionAnimatable {
     
     // MARK: Default properties
     
