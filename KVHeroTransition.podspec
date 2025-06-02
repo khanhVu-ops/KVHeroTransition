@@ -6,6 +6,10 @@
 # To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
 #
 
+# to update new version need:
+# - Increase s.version
+# - Run command 'pod trunk push KVHeroTransition.podspec --allow-warnings'
+
 Pod::Spec.new do |s|
   s.name             = 'KVHeroTransition'
   s.version          = '0.1.1'

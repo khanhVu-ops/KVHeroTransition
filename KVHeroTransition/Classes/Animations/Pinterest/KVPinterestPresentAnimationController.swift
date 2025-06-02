@@ -1,8 +1,8 @@
 //
-//  PinterestPresentAnimationController.swift
-//  UICollectionViewTransitions
+//  KVPinterestPresentAnimationController.swift
+//  KVHeroTransition
 //
-//  Created by Luis Fariña on 31/10/22.
+//  Created by Khanh Vu on 2/6/25.
 //
 
 import UIKit
@@ -35,7 +35,6 @@ extension KVPinterestPresentAnimationController: UIViewControllerAnimatedTransit
         0.5
     }
 
-    // swiftlint:disable function_body_length line_length
     func animateTransition(
         using transitionContext: UIViewControllerContextTransitioning
     ) {
@@ -130,5 +129,4 @@ extension KVPinterestPresentAnimationController: UIViewControllerAnimatedTransit
             completion(!transitionContext.transitionWasCancelled)
         }
     }
-    // swiftlint:enable function_body_length line_length
 }

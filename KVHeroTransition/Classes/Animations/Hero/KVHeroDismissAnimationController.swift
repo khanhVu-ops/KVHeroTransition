@@ -1,10 +1,9 @@
 //
-//  InstagramDismissAnimationController.swift
-//  UICollectionViewTransitions
+//  KVHeroDismissAnimationController.swift
+//  KVHeroTransition
 //
 //  Created by Khanh Vu on 2/6/25.
 //
-
 import UIKit
 
 final class KVHeroDismissAnimationController: NSObject {
