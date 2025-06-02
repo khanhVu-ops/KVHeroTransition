@@ -25,7 +25,7 @@ final class KVDismissInteractionController: UIPercentDrivenInteractiveTransition
         private let minScale: CGFloat = 0.8
         private let maxDragDistance: CGFloat = 300
         private let velocityThreshold: CGFloat = 1000
-        private let animationDuration: TimeInterval = 0.3
+        private let animationDuration: TimeInterval = 0.25
         private let dismissThreshold: CGFloat = 0.3
     
     // MARK: Initialization

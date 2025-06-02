@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33A25A092DEDD95000057343 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A25A052DEDD95000057343 /* PhotoCell.swift */; };
+		33A25A0A2DEDD95000057343 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A25A062DEDD95000057343 /* PhotoDetailViewController.swift */; };
+		33A25A0B2DEDD95000057343 /* PhotoGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A25A072DEDD95000057343 /* PhotoGalleryViewController.swift */; };
+		33A25A0F2DEDDD4B00057343 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A25A0E2DEDDD4400057343 /* UIImageView+.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -30,6 +34,10 @@
 /* Begin PBXFileReference section */
 		10E55B3806F7D1C61C6688C3 /* Pods_KVHeroTransition_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KVHeroTransition_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		213A1B649167F4B177865B36 /* Pods_KVHeroTransition_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KVHeroTransition_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		33A25A052DEDD95000057343 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		33A25A062DEDD95000057343 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		33A25A072DEDD95000057343 /* PhotoGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryViewController.swift; sourceTree = "<group>"; };
+		33A25A0E2DEDDD4400057343 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* KVHeroTransition_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KVHeroTransition_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +86,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		33A25A082DEDD95000057343 /* PhotoGalleryExample */ = {
+			isa = PBXGroup;
+			children = (
+				33A25A0E2DEDDD4400057343 /* UIImageView+.swift */,
+				33A25A052DEDD95000057343 /* PhotoCell.swift */,
+				33A25A062DEDD95000057343 /* PhotoDetailViewController.swift */,
+				33A25A072DEDD95000057343 /* PhotoGalleryViewController.swift */,
+			);
+			path = PhotoGalleryExample;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +121,7 @@
 		607FACD21AFB9204008FA782 /* Example for KVHeroTransition */ = {
 			isa = PBXGroup;
 			children = (
+				33A25A082DEDD95000057343 /* PhotoGalleryExample */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -330,7 +350,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33A25A0F2DEDDD4B00057343 /* UIImageView+.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				33A25A092DEDD95000057343 /* PhotoCell.swift in Sources */,
+				33A25A0A2DEDD95000057343 /* PhotoDetailViewController.swift in Sources */,
+				33A25A0B2DEDD95000057343 /* PhotoGalleryViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
