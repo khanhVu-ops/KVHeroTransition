@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import KVHeroTransition
 
 class ViewController: UIViewController {
 
+    var manager: KVHeroTransitionManager!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
