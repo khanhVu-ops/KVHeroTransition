@@ -29,7 +29,7 @@
 
 ## 📸 Demo
 
-![KVHeroTransition Demo](demo.gif)
+![KVHeroTransition Demo](https://raw.githubusercontent.com/khanhVu-ops/KVHeroTransition/main/demo_example.gif)
 
 *Smooth transitions with interactive dismiss gestures*
 
@@ -451,33 +451,12 @@ KVHeroTransition is released under the **MIT License**. See [LICENSE](LICENSE) f
 
 ---
 
-## 🌟 Show Your Support
-
-If you find KVHeroTransition helpful, please:
-
-- ⭐ **Star** this repository on GitHub
-- 🐦 **Share** it on social media
-- 💬 **Tell** your friends and colleagues
-- 🔗 **Link** to it in your projects
-
-[![GitHub stars](https://img.shields.io/github/stars/khanhVu-ops/KVHeroTransition.svg?style=social&label=Star)](https://github.com/khanhVu-ops/KVHeroTransition)
-[![GitHub forks](https://img.shields.io/github/forks/khanhVu-ops/KVHeroTransition.svg?style=social&label=Fork)](https://github.com/khanhVu-ops/KVHeroTransition/fork)
-
----
-
 ## 🔍 Keywords
 
 `iOS animation` `hero transition` `zoom animation` `UIViewController transition` `Swift animation library` `iOS UI` `Material Design` `interactive transition` `drag to dismiss` `photo gallery transition` `custom transition` `iOS development` `Swift package` `CocoaPods` `open source iOS`
 
 ---
 
-## 📚 Related Projects
-
-- [Hero](https://github.com/HeroTransitions/Hero) - Supercharged transition engine
-- [Lottie](https://github.com/airbnb/lottie-ios) - Animation library
-- [Spring](https://github.com/MengTo/Spring) - Swift animation framework
-
----
 
 <p align="center">
   <strong>Made with ❤️ by Khanh Vu</strong><br>
