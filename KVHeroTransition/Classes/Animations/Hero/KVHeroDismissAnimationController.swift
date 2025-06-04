@@ -104,7 +104,7 @@ private extension KVHeroDismissAnimationController {
         components: TransitionComponents
     ) {
         let snapshotViewContainerView = UIImageView()
-        snapshotViewContainerView.contentMode = .scaleAspectFit
+        snapshotViewContainerView.contentMode = presentingViewController.heroImageContentMode()
         snapshotViewContainerView.image = presentedViewController.heroImage()
         snapshotViewContainerView.clipsToBounds = true
         snapshotViewContainerView.frame = components.presentedFrame

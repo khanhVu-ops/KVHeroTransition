@@ -132,7 +132,7 @@ private extension KVPinterestPresentAnimationController {
         components: TransitionComponents
     ) {
         let toSnapshotViewContainerView = UIImageView()
-        toSnapshotViewContainerView.contentMode = .scaleAspectFill
+        toSnapshotViewContainerView.contentMode = presentingViewController.heroImageContentMode()
         toSnapshotViewContainerView.image = presentingViewController.heroImage()
         toSnapshotViewContainerView.clipsToBounds = true
         toSnapshotViewContainerView.frame = components.presentingFrame
@@ -183,9 +183,10 @@ private extension KVPinterestPresentAnimationController {
         // same as those of the presenting view controller's image view
         let finalFrame = transitionContext.finalFrame(for: components.toViewController)
         let toSnapshotViewScaleTransform = CGAffineTransform(scaleX: components.toSnapshotViewScaleFactorX, y: components.toSnapshotViewScaleFactorY)
+        let scaleUpSnapshotFrame = components.presentedFrame.applying(toSnapshotViewScaleTransform)
         components.toSnapshotView.frame = finalFrame.applying(toSnapshotViewScaleTransform)
-        components.toSnapshotView.frame.origin.y -= components.presentedFrame.applying(toSnapshotViewScaleTransform).origin.y
-        components.toSnapshotView.frame.origin.x -= components.presentedFrame.applying(toSnapshotViewScaleTransform).origin.x
+        components.toSnapshotView.frame.origin.y -= scaleUpSnapshotFrame.origin.y
+        components.toSnapshotView.frame.origin.x -= scaleUpSnapshotFrame.origin.x
 
         // Create a view to mask the snapshot of the presented view controller so that it
         // looks like the selected cell from the presenting view controller

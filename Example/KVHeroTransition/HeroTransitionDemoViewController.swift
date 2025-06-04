@@ -1,7 +1,7 @@
 import UIKit
 import KVHeroTransition
 
-class PhotoGalleryViewController: UIViewController {
+class HeroTransitionDemoViewController: UIViewController {
     
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -28,10 +28,19 @@ class PhotoGalleryViewController: UIViewController {
         UIImage(named: "photo3") ?? UIImage()
     ]
     
+    private let type: TransitionDemoType
     private var heroTransitionManager: KVHeroTransitionManager?
     private var pinterestTransitionManager: KVPinterestTransitionManager?
-
     private var cellSelected: PhotoCell?
+
+    init(type: TransitionDemoType) {
+        self.type = type
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +48,7 @@ class PhotoGalleryViewController: UIViewController {
     }
     
     private func setupUI() {
-        title = "Photo Gallery"
+        title = type.title
         view.backgroundColor = .systemBackground
         
         view.addSubview(collectionView)
@@ -82,10 +91,32 @@ class PhotoGalleryViewController: UIViewController {
         detailVC.transitioningDelegate = pinterestTransitionManager
         self.navigationController?.present(detailVC, animated: true)
     }
+    
+    private func bannerTransition(_ indexPath: IndexPath) {
+        let detailVC = BannerDetailViewController()
+        detailVC.photo = photos[indexPath.item]
+
+        heroTransitionManager = KVHeroTransitionManager(
+            presentingViewController: self,
+            presentedViewController: detailVC
+        )
+        
+        detailVC.modalPresentationStyle = .custom
+        detailVC.transitioningDelegate = heroTransitionManager
+        self.navigationController?.present(detailVC, animated: true)
+    }
+    
+    func presentDetailViewController(indexPath: IndexPath) {
+        switch type {
+        case .hero: heroTransition(indexPath)
+        case .pinterest: pỉnterestTransition(indexPath)
+        case .banner: bannerTransition(indexPath)
+        }
+    }
 }
 
 // MARK: - UICollectionViewDataSource
-extension PhotoGalleryViewController: UICollectionViewDataSource {
+extension HeroTransitionDemoViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return photos.count
     }
@@ -98,24 +129,24 @@ extension PhotoGalleryViewController: UICollectionViewDataSource {
 }
 
 // MARK: - UICollectionViewDelegate
-extension PhotoGalleryViewController: UICollectionViewDelegate {
+extension HeroTransitionDemoViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let cell = collectionView.cellForItem(at: indexPath) as? PhotoCell else { return }
         cellSelected = cell
         
-        pỉnterestTransition(indexPath)
+        presentDetailViewController(indexPath: indexPath)
     }
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
-extension PhotoGalleryViewController: UICollectionViewDelegateFlowLayout {
+extension HeroTransitionDemoViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = (collectionView.bounds.width - 10) / 2
         return CGSize(width: width, height: width)
     }
-} 
+}
 
-extension PhotoGalleryViewController: KVTransitionAnimatable {
+extension HeroTransitionDemoViewController: KVTransitionAnimatable {
     var imageViewFrame: CGRect? {
         guard let imv = cellSelected?.getImageView() else { return .zero }
         return imv.convert(imv.bounds, to: self.view)
@@ -127,6 +158,10 @@ extension PhotoGalleryViewController: KVTransitionAnimatable {
     
     func heroImage() -> UIImage? {
         return cellSelected?.getImageView().image
+    }
+    
+    func heroImageContentMode() -> UIView.ContentMode {
+        return .scaleAspectFill
     }
     
     func animationWillStart(transitionType: KVTransitionType) {
@@ -147,4 +182,5 @@ extension PhotoGalleryViewController: KVTransitionAnimatable {
 
         }
     }
+
 }

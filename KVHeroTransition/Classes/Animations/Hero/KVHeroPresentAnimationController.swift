@@ -108,7 +108,7 @@ private extension KVHeroPresentAnimationController {
         components: TransitionComponents
     ) {
         let snapshotViewContainerView = UIImageView()
-        snapshotViewContainerView.contentMode = .scaleAspectFill
+        snapshotViewContainerView.contentMode = presentingViewController.heroImageContentMode()
         snapshotViewContainerView.image = presentingViewController.heroImage()
         snapshotViewContainerView.clipsToBounds = true
         snapshotViewContainerView.frame = components.presentingFrame
@@ -142,9 +142,10 @@ private extension KVHeroPresentAnimationController {
         // Set the frame of the presented view controller's snapshot so that the position and size of its image view
         // are the same as those of the presenting view controller's image view
         let finalFrame = transitionContext.finalFrame(for: components.toViewController)
-        let scaleFactorX = components.presentingFrame.width / components.presentedFrame.width
-        let scaleFactorY = components.presentingFrame.height / components.presentedFrame.height
-
+        let tempScaleFactorX = components.presentingFrame.width / components.presentedFrame.width
+        let tempScaleFactorY = components.presentingFrame.height / components.presentedFrame.height
+        let scaleFactorX = tempScaleFactorX.isNaN ? 1 : tempScaleFactorX
+        let scaleFactorY = tempScaleFactorY.isNaN ? 1 : tempScaleFactorY
         let scaleTransform = CGAffineTransform(scaleX: scaleFactorX, y: scaleFactorY)
         components.snapshotView.frame = finalFrame.applying(scaleTransform)
         components.snapshotView.frame.origin.y -= components.presentedFrame.applying(scaleTransform).origin.y

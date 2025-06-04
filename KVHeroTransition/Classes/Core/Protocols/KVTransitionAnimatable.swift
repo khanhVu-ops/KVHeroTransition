@@ -28,6 +28,8 @@ public protocol KVTransitionAnimatable where Self: UIViewController {
     /// Returns the hero image for transition animation
     func heroImage() -> UIImage?
     
+    func heroImageContentMode() -> UIView.ContentMode
+    
     /// Returns the view that responds to dismiss interaction
     func interactionViewForDismiss() -> UIView?
     
@@ -77,5 +79,9 @@ public extension KVTransitionAnimatable {
     
     func heroImage() -> UIImage? {
         return nil
+    }
+    
+    func heroImageContentMode() -> UIView.ContentMode {
+        return .scaleAspectFill
     }
 }

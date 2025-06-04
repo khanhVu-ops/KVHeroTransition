@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		33A25A092DEDD95000057343 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A25A052DEDD95000057343 /* PhotoCell.swift */; };
 		33A25A0A2DEDD95000057343 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A25A062DEDD95000057343 /* PhotoDetailViewController.swift */; };
-		33A25A0B2DEDD95000057343 /* PhotoGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A25A072DEDD95000057343 /* PhotoGalleryViewController.swift */; };
 		33A25A0F2DEDDD4B00057343 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A25A0E2DEDDD4400057343 /* UIImageView+.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -17,6 +16,9 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		84FDC24E2DEFEF7B00124111 /* TransitionDemoType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FDC24D2DEFEF7B00124111 /* TransitionDemoType.swift */; };
+		84FDC24F2DEFEF7B00124111 /* HeroTransitionDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FDC24B2DEFEF7B00124111 /* HeroTransitionDemoViewController.swift */; };
+		84FDC2522DF034F600124111 /* BannerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FDC2512DF034F600124111 /* BannerDetailViewController.swift */; };
 		D60EA1DB2D342A35BC5B2C69 /* Pods_KVHeroTransition_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 213A1B649167F4B177865B36 /* Pods_KVHeroTransition_Tests.framework */; };
 		FC494B8219EBFC8232143410 /* Pods_KVHeroTransition_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10E55B3806F7D1C61C6688C3 /* Pods_KVHeroTransition_Example.framework */; };
 /* End PBXBuildFile section */
@@ -36,7 +38,6 @@
 		213A1B649167F4B177865B36 /* Pods_KVHeroTransition_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KVHeroTransition_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		33A25A052DEDD95000057343 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		33A25A062DEDD95000057343 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
-		33A25A072DEDD95000057343 /* PhotoGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryViewController.swift; sourceTree = "<group>"; };
 		33A25A0E2DEDDD4400057343 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* KVHeroTransition_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KVHeroTransition_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +52,9 @@
 		649753AEBF035671E48A927B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		6DDD9EEDEAD4B2149E20EDBA /* Pods-KVHeroTransition_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KVHeroTransition_Example.release.xcconfig"; path = "Target Support Files/Pods-KVHeroTransition_Example/Pods-KVHeroTransition_Example.release.xcconfig"; sourceTree = "<group>"; };
 		764375819F8962E96B91FE88 /* Pods-KVHeroTransition_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KVHeroTransition_Tests.debug.xcconfig"; path = "Target Support Files/Pods-KVHeroTransition_Tests/Pods-KVHeroTransition_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		84FDC24B2DEFEF7B00124111 /* HeroTransitionDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroTransitionDemoViewController.swift; sourceTree = "<group>"; };
+		84FDC24D2DEFEF7B00124111 /* TransitionDemoType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionDemoType.swift; sourceTree = "<group>"; };
+		84FDC2512DF034F600124111 /* BannerDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerDetailViewController.swift; sourceTree = "<group>"; };
 		85B7645A1B0218B18CC924F6 /* KVHeroTransition.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = KVHeroTransition.podspec; path = ../KVHeroTransition.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		8A066A7C09B454DAE38B587A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		C2EB7539F42E38F044BD7FA1 /* Pods-KVHeroTransition_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KVHeroTransition_Tests.release.xcconfig"; path = "Target Support Files/Pods-KVHeroTransition_Tests/Pods-KVHeroTransition_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -86,17 +90,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		33A25A082DEDD95000057343 /* PhotoGalleryExample */ = {
-			isa = PBXGroup;
-			children = (
-				33A25A0E2DEDDD4400057343 /* UIImageView+.swift */,
-				33A25A052DEDD95000057343 /* PhotoCell.swift */,
-				33A25A062DEDD95000057343 /* PhotoDetailViewController.swift */,
-				33A25A072DEDD95000057343 /* PhotoGalleryViewController.swift */,
-			);
-			path = PhotoGalleryExample;
-			sourceTree = "<group>";
-		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -121,7 +114,9 @@
 		607FACD21AFB9204008FA782 /* Example for KVHeroTransition */ = {
 			isa = PBXGroup;
 			children = (
-				33A25A082DEDD95000057343 /* PhotoGalleryExample */,
+				84FDC2532DF03B1B00124111 /* Detail */,
+				84FDC2542DF03B2B00124111 /* Components */,
+				84FDC24B2DEFEF7B00124111 /* HeroTransitionDemoViewController.swift */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -166,6 +161,25 @@
 				8A066A7C09B454DAE38B587A /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		84FDC2532DF03B1B00124111 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				84FDC2512DF034F600124111 /* BannerDetailViewController.swift */,
+				33A25A062DEDD95000057343 /* PhotoDetailViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		84FDC2542DF03B2B00124111 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				33A25A0E2DEDDD4400057343 /* UIImageView+.swift */,
+				33A25A052DEDD95000057343 /* PhotoCell.swift */,
+				84FDC24D2DEFEF7B00124111 /* TransitionDemoType.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		9DFEBD7E7B7B49908382B3A3 /* Pods */ = {
@@ -354,7 +368,9 @@
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				33A25A092DEDD95000057343 /* PhotoCell.swift in Sources */,
 				33A25A0A2DEDD95000057343 /* PhotoDetailViewController.swift in Sources */,
-				33A25A0B2DEDD95000057343 /* PhotoGalleryViewController.swift in Sources */,
+				84FDC24E2DEFEF7B00124111 /* TransitionDemoType.swift in Sources */,
+				84FDC2522DF034F600124111 /* BannerDetailViewController.swift in Sources */,
+				84FDC24F2DEFEF7B00124111 /* HeroTransitionDemoViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
