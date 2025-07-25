@@ -128,6 +128,7 @@ private extension KVHeroPresentAnimationController {
             snapshotViewContainerView.frame = components.presentedFrame
 
         } completion: { _ in
+            components.toViewController.view.layoutIfNeeded()
             components.toViewController.view.isHidden = false
             snapshotViewContainerView.removeFromSuperview()
             self.completeTransition(transitionContext, success: !transitionContext.transitionWasCancelled)
@@ -180,6 +181,7 @@ private extension KVHeroPresentAnimationController {
             snapshotViewContainerView.layer.cornerRadius = self.presentedViewController.cornerRadius
 
         } completion: { _ in
+            components.toViewController.view.layoutIfNeeded()
             components.toViewController.view.isHidden = false
             snapshotViewContainerView.removeFromSuperview()
             self.completeTransition(transitionContext, success: !transitionContext.transitionWasCancelled)

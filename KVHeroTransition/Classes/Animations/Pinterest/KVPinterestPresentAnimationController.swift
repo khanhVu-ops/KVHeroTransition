@@ -168,6 +168,7 @@ private extension KVPinterestPresentAnimationController {
             
         } completion: { _ in
             [components.fromViewController, components.toViewController].forEach {
+                $0.view.layoutIfNeeded()
                 $0.view.isHidden = false
             }
             toSnapshotViewContainerView.removeFromSuperview()
@@ -228,6 +229,7 @@ private extension KVPinterestPresentAnimationController {
             toSnapshotViewContainerView.layer.cornerRadius = self.presentedViewController.cornerRadius
         } completion: { _ in
             [components.fromViewController, components.toViewController].forEach {
+                $0.view.layoutIfNeeded()
                 $0.view.isHidden = false
             }
             [components.fromSnapshotView, toSnapshotViewContainerView].forEach {
