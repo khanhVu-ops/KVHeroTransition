@@ -265,6 +265,18 @@ private extension KVDismissInteractionController {
         let dragDistance = abs(translation.y)
         return min(max(0, dragDistance / 200), 1)
     }
+    
+    func findScrollView(in view: UIView) -> UIScrollView? {
+        if let scrollView = view as? UIScrollView {
+            return scrollView
+        }
+        for subview in view.subviews.reversed() {
+            if let found = findScrollView(in: subview) {
+                return found
+            }
+        }
+        return nil
+    }
 }
 
 // MARK: - Gesture Recognizer Delegate
@@ -282,17 +294,26 @@ extension KVDismissInteractionController: UIGestureRecognizerDelegate {
     
     func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         // Only begin if it's a pan gesture with primarily vertical movement
-        if let panGesture = gestureRecognizer as? UIPanGestureRecognizer {
-            let velocity = panGesture.velocity(in: viewController?.view)
-            
-            // Make sure current media isn't zoomed in
-            if viewController?.enableInteractionDismiss == false {
-                return false
-            }
-            
-            // Only allow vertical dragging
-            return abs(velocity.y) > abs(velocity.x)
+        guard let panGesture = gestureRecognizer as? UIPanGestureRecognizer,
+              let view = viewController?.view else {
+            return true
         }
-        return true
+        
+        let velocity = panGesture.velocity(in: view)
+        
+        // Make sure current media isn't zoomed in
+        if viewController?.enableInteractionDismiss == false {
+            return false
+        }
+        
+        // Get scrollView → Check offset
+        if let scrollView = findScrollView(in: view) {
+            let isAtTop = scrollView.contentOffset.y <= 0
+            let isDraggingDown = velocity.y > 0
+            return isAtTop && isDraggingDown
+        }
+        
+        // if scrollView empty, default check
+        return velocity.y > abs(velocity.x)
     }
 }
